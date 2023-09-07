@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="clouser" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function createAdder(a) {
+        return function add(b) {
+          const sum = a + b;
+          return sum;
+        };
+      }
+      const addTo2 = createAdder(2);
+      console.log(addTo2(5));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var createCounter = function (init) {
+        let presentCount = init;
+
+        function increment() {
+          return ++presentCount;
+        }
+
+        function decrement() {
+          return --presentCount;
+        }
+
+        function reset() {
+          return (presentCount = init);
+        }
+
+        return { increment, decrement, reset };
+      };
+      const counter = createCounter(5);
+      counter.increment(); // 6
+      counter.reset(); // 5
+      counter.decrement(); // 4
+    </script>
+  </body>
+</html>
