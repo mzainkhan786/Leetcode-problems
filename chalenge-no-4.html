@@ -7,7 +7,7 @@
   </head>
   <body>
     <script>
-      var createCounter = function (init) {
+      let createCounter = function (init) {
         let presentCount = init;
 
         function increment() {
@@ -25,7 +25,7 @@
         return { increment, decrement, reset };
       };
       const counter = createCounter(5);
-      counter.increment(); // 6
+      console.log(counter.decrement());
       counter.reset(); // 5
       counter.decrement(); // 4
     </script>
